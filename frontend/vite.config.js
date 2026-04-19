@@ -7,9 +7,12 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:10012',
         changeOrigin: true
       }
     }
+  },
+  build: {
+    outDir: 'dist'
   }
 })

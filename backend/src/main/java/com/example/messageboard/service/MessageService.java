@@ -62,7 +62,7 @@ public class MessageService {
         
         List<Message> pageMessages = start < filteredMessages.size() 
                 ? filteredMessages.subList(start, end) 
-                : List.of();
+                : new java.util.ArrayList<>();
         
         return new PageResult<>(pageMessages, total, page, size);
     }
